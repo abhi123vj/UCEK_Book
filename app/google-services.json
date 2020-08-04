@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "385021529596",
+    "firebase_url": "https://ucek-book.firebaseio.com",
+    "project_id": "ucek-book",
+    "storage_bucket": "ucek-book.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385021529596:android:7358639c2ed369d100f679",
+        "android_client_info": {
+          "package_name": "com.abhi.ucekbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385021529596-fbsn03nocpheao7sga0tv6h7397adk4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abhi.ucekbook",
+            "certificate_hash": "789513bdc7b38548f375d76e3d4d73c7d2539d98"
+          }
+        },
+        {
+          "client_id": "385021529596-sre4gvo1drdtusulb4ukakn962dnm4gd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC65pbE224uIIFCtRF-PG0B5kJRko4sgCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385021529596-sre4gvo1drdtusulb4ukakn962dnm4gd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
