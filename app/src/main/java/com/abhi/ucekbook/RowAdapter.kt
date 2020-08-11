@@ -10,13 +10,15 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.SmoothScroller
+import com.abhi.ucekboo.`interface`.OnItemClick
 import com.abhi.ucekbook.models.RowModel
 
-class RowAdapter (val context: Context, var rowModels: MutableList<RowModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class RowAdapter (val context: Context, var rowModels: MutableList<RowModel> ,val listener: OnItemClick) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     /**
      * flag to restrict expand / collapse action it is already expanding / collapsing
@@ -35,9 +37,11 @@ class RowAdapter (val context: Context, var rowModels: MutableList<RowModel>) : 
     class StateViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         internal var name_tv: TextView
         internal var toggle_btn : ImageButton
+        internal  var cardview_btn : CardView
         init {
             this.name_tv = itemView.findViewById(R.id.name_tv) as TextView
             this.toggle_btn = itemView.findViewById(R.id.toggle_btn) as ImageButton
+            this.cardview_btn = itemView.findViewById(R.id.state_cardview) as CardView
         }
     }
 
@@ -119,6 +123,9 @@ class RowAdapter (val context: Context, var rowModels: MutableList<RowModel>) : 
                         p0.toggle_btn.background =
                             ContextCompat.getDrawable(context, R.drawable.ic_control_point_black_24dp)
                     }
+                }
+                p0.cardview_btn.setOnClickListener {
+                    listener.onClick(row.subject.name)
                 }
 
                 p0.toggle_btn.setOnClickListener {
