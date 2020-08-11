@@ -30,9 +30,9 @@ class Adapter(val context: Context, val itemList: ArrayList<Model>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val food = itemList[position]
+       /// val food = itemList[position]
 
-        holder.txtFoodName.text = food.Key
+      //  holder.txtFoodName.text = food.Key
 
 
     }

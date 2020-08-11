@@ -1,4 +1,4 @@
 package com.abhi.ucekbook
 
-data class Model(  val Key :String,
-                   val Value : String )
+data class Model(  val FieldKey : String,
+                   val FieldValue : String)
