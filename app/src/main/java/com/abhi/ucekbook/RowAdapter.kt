@@ -85,11 +85,12 @@ class RowAdapter (val context: Context, var rowModels: MutableList<RowModel> ,va
 
                     if (row.isExpanded) {
                         p0.toggle_btn.background =
-                            ContextCompat.getDrawable(context, R.drawable.ic_remove_circle_outline_black_24dp)
+                            ContextCompat.getDrawable(context, R.drawable.ic_baseline_keyboard_arrow_up_24)
                     } else {
                         p0.toggle_btn.background =
-                            ContextCompat.getDrawable(context, R.drawable.ic_control_point_black_24dp)
+                            ContextCompat.getDrawable(context, R.drawable.ic_baseline_keyboard_arrow_down_24)
                     }
+                    p0.name_tv.setSelected(true)//scrolling
 
                     p0.toggle_btn.setOnClickListener {
                         if (!actionLock) {
@@ -118,10 +119,10 @@ class RowAdapter (val context: Context, var rowModels: MutableList<RowModel> ,va
 
                     if (row.isExpanded) {
                         p0.toggle_btn.background =
-                            ContextCompat.getDrawable(context, R.drawable.ic_remove_circle_outline_black_24dp)
+                            ContextCompat.getDrawable(context, R.drawable.ic_baseline_keyboard_arrow_up_24)
                     } else {
                         p0.toggle_btn.background =
-                            ContextCompat.getDrawable(context, R.drawable.ic_control_point_black_24dp)
+                            ContextCompat.getDrawable(context, R.drawable.ic_baseline_keyboard_arrow_down_24)
                     }
                 }
                 p0.cardview_btn.setOnClickListener {
