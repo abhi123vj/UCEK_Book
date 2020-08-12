@@ -99,8 +99,8 @@ class MainActivity : AppCompatActivity(), OnItemClick {
             crnt = value.FieldValue + "/" + value.FieldKey
             stack.push(crnt)
             display(stack.peek())
-            Log.d("TAG", "onlick $stack ")
-            if(value.FieldKey=="Question Paper"|| value.FieldKey=="Notes")
+            Log.d("TAG", "onlick $value ")
+            if(value.FieldKey=="Question Paper"|| value.FieldKey=="Notes"||value.FieldKey=="Syllabus")
                 flag=1
         }
         else{
