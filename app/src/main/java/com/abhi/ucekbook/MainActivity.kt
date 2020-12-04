@@ -60,10 +60,11 @@ class MainActivity : AppCompatActivity(), OnItemClick {
         display("Sem")
     }
 
-    private fun display(path: String) {
+    private fun display(path: String?) {
         progressLayout.visibility = VISIBLE
         val db = Firebase.firestore
         val TAG = "abhi123"
+        if(!path.isNullOrEmpty())
         db.collection(path)
             .get()
             .addOnSuccessListener { result ->
@@ -84,9 +85,10 @@ class MainActivity : AppCompatActivity(), OnItemClick {
                 progressLayout.visibility = GONE
             }
             .addOnFailureListener { exception ->
+                progressLayout.visibility = GONE
+                Toast.makeText(this@MainActivity, "Error 404!! Try again later", Toast.LENGTH_SHORT).show()
                 Log.d(TAG, "Error getting documents: ", exception)
             }
-        Log.d(TAG, "Error getting documents: ")
     }
 
     var stack = ArrayDeque<String>()
@@ -102,6 +104,7 @@ class MainActivity : AppCompatActivity(), OnItemClick {
             Log.d("TAG", "onlick $value ")
             if(value.FieldKey=="Question Paper"|| value.FieldKey=="Notes"||value.FieldKey=="Syllabus")
                 flag=1
+
         }
         else{
             val intent = Intent(Intent.ACTION_VIEW)

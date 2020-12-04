@@ -5,4 +5,8 @@
     <color name="colorAccent">#def2f1</color>
     <color name="mainrecylerdarkblue">#17242a</color>
     <color name="Stocklightblue">#DDDFD4</color>
+    <color name="BlockCountry">#173E43</color>
+    <color name="BlockState">#FAE596</color>
+    <color name="BlockStatetext">#000000</color>
+    <color name="BlockCountrytext">#ffffff</color>
 </resources>

@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="70dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#17242a"
     android:layout_marginStart="2dp"
     android:layout_marginEnd="2dp"
     android:layout_marginTop="5dp"
@@ -16,7 +15,7 @@
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="70dp"
-        android:background="#173E43"
+        android:background="@color/BlockCountry"
         android:orientation="horizontal"
         android:weightSum="6">
 
@@ -37,14 +36,12 @@
             android:layout_weight="5.6">
 
             <TextView
-                android:layout_marginLeft="4dp"
-                android:gravity=""
+                android:layout_marginStart="4dp"
                 android:id="@+id/name_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Name of the book"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/BlockCountrytext"
                 android:textSize="26sp"
 
                 android:focusable="true"
@@ -70,7 +67,7 @@
 
             android:layout_height="wrap_content"
             android:layout_weight=".4"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
             android:scaleType="centerCrop"
             android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
             />

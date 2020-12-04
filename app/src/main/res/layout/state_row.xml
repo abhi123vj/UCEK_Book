@@ -7,14 +7,13 @@
     android:layout_marginStart="8dp"
     android:layout_marginTop="4dp"
     android:layout_marginEnd="2dp"
-    android:background="#2b7a77"
     app:cardCornerRadius="8dp">
 
     <LinearLayout
         android:id="@+id/llContent"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#FAE596"
+        android:background="@color/BlockState"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="6">
@@ -39,10 +38,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:lines="1"
+                android:singleLine="true"
                 android:padding="8dp"
-                android:text="Name of the book"
-                android:textColor="#000000"
+                android:textColor="@color/BlockStatetext"
                 android:textSize="21sp" />
 
         </RelativeLayout>
