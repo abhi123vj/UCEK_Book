@@ -1,5 +1,6 @@
 package com.abhi.ucekbook
 
+import android.app.ActivityOptions
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -10,6 +11,7 @@ import android.util.Log
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import android.view.Window
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.Toast
@@ -20,8 +22,11 @@ import com.abhi.ucekbook.models.RowModel
 import com.abhi.ucekbook.models.Semester
 import com.abhi.ucekbook.models.Subject
 import com.abhi.ucekbook.models.Year
+import androidx.transition.Transition
+import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.reflect.Field
 import java.util.*
 
@@ -38,6 +43,9 @@ class MainActivity : AppCompatActivity(), OnItemClick {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
+        setExitSharedElementCallback(MaterialContainerTransformSharedElementCallback())
+        window.sharedElementsUseOverlay = false
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -58,6 +66,18 @@ class MainActivity : AppCompatActivity(), OnItemClick {
 
         progressBar = findViewById(R.id.progressBar)
         display("Sem")
+
+        floating_action_button.setOnClickListener {
+            val intent = Intent(this, DownloadActivity::class.java)
+            val startView= floating_action_button
+            val options = ActivityOptions.makeSceneTransitionAnimation(
+                this,
+                startView,
+                "shared_element_container" // The transition name to be matched in Activity B.
+            )
+            startActivity(intent, options.toBundle())
+
+        }
     }
 
     private fun display(path: String?) {

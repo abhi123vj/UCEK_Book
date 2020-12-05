@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Stocklightblue"
-    tools:context=".MainActivity">
+    tools:context=".DownloadActivity">
     <View
         android:id="@+id/start_view"
         android:transitionName="shared_element_container"
@@ -40,7 +40,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:elevation="0dp"
                 app:layout_collapseMode="pin"
-                app:title="@string/page_title"
+                app:title="@string/page_title_2"
 
                 app:titleTextColor="@color/Appbartxt" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -80,12 +80,4 @@
             android:text="Loading..."
             android:textColor="@color/ProgrssTxt" />
     </RelativeLayout>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        app:backgroundTint="@color/Stocklightblue"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_outline_save_24"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
