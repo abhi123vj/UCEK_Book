@@ -107,6 +107,8 @@ class MainActivity : AppCompatActivity(), OnItemClick {
 
         }
         else{
+            Toast.makeText(this@MainActivity, value.FieldKey, Toast.LENGTH_SHORT).show()
+
             val intent = Intent(Intent.ACTION_VIEW)
             intent.setDataAndType(Uri.parse(value.FieldValue), "application/pdf")
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP

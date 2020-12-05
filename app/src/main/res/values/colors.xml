@@ -9,4 +9,7 @@
     <color name="BlockState">#FAE596</color>
     <color name="BlockStatetext">#000000</color>
     <color name="BlockCountrytext">#ffffff</color>
+    <color name="Appbartxt">#ffffff</color>
+    <color name="ProgrssTxt">#17242a</color>
+    <color name="ProgressCircle">#2b7a77</color>
 </resources>
